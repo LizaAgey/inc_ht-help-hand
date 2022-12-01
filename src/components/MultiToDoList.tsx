@@ -6,16 +6,17 @@ type ToDoListType = {
     children: React.ReactNode
 }
 
-const MultyToDoList: React.FC<ToDoListType> = (props) => {
+const MultiToDoList: React.FC<ToDoListType> = (props) => {
     const {tasks, children, ...otherProps} = props
 
+    const tasksList = tasks.map(element => <li key={element.id}>
+        <span>{element.title}</span>
+        <input type="checkbox" checked={element.isDone}/>
+    </li>)
     return (
         <div>
             <ul>
-                {tasks.map(element => <li key={element.id}>
-                    <span>{element.title}</span>
-                    <input type="checkbox" checked={element.isDone}/>
-                </li>)}
+                {tasksList}
             </ul>
             {children}
             <hr/>
@@ -23,4 +24,4 @@ const MultyToDoList: React.FC<ToDoListType> = (props) => {
     );
 };
 
-export default MultyToDoList;
+export default MultiToDoList;

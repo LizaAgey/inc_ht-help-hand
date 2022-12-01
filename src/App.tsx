@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Button from './components/SuperButton';
-import MultyToDoList from './components/MultyToDoList';
+import MultiToDoList from './components/MultiToDoList';
 
 export type TaskType= {
     id: number
@@ -18,16 +18,16 @@ function App() {
 
     return (
         <>
-            <MultyToDoList tasks={tasks}>
+            <MultiToDoList tasks={tasks}>
                 <div>News</div>
                 <div>News</div>
                 <div>News</div>
                 <div>News</div>
                 <div>News</div>
                 <div>News</div>
-            </MultyToDoList>
+            </MultiToDoList>
 
-            <MultyToDoList tasks={tasks}>
+            <MultiToDoList tasks={tasks}>
                 <div>News</div>
                 <div>News</div>
                 <div>News</div>
@@ -37,9 +37,9 @@ function App() {
                 <Button callback={() => {}} color={'red'}>Red Button</Button>
                 <Button callback={() => {}}>Default Button</Button>
                 <Button callback={() => {}} color={"secondary"} disabled>Secondary disabled Button</Button>
-            </MultyToDoList>
+            </MultiToDoList>
 
-            <MultyToDoList tasks={tasks}>Nothing</MultyToDoList>
+            <MultiToDoList tasks={tasks}>Nothing</MultiToDoList>
 
 
         </>
